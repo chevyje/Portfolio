@@ -1,0 +1,259 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 2%;
+    user-select: none;
+}
+
+.intro h6, h1, h2{
+    margin: 0;
+    text-align: center;
+}
+
+.intro h1 {
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 0.9;
+}
+
+.intro h2 {
+    font-size: 60px
+}
+
+.intro div {
+    display: flex;
+}
+
+.picture {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    width: 25vw;
+    height: 25vw;
+    margin: auto;
+}
+
+.homeContainer{
+    display: flex;
+    height: 40vw;
+}
+
+.socials{
+    display: flex;
+    margin-left: 20px;
+}
+
+.socials div{
+    background-color: #0040FF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials div img{
+    width: 35px;
+    height: 35px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    margin: 75px 12%;
+    scroll-margin-top: 40px
+}
+
+.about h1{
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.about p{
+    font-size: 20px;
+}
+
+.education {
+    background-color: #0bb7f6;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    scroll-margin-top: 40px
+}
+
+.education h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+.timelineLine {
+    position: relative;
+    margin: auto;
+    background-color: white;
+    width: 4px;
+}
+
+.timelineEntry {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.timelineCard {
+    position: relative;
+    background: white;
+    padding: 1px 20px;
+    width: 300px;
+    border-radius: 12px;
+    text-align: left;
+    line-height: 0.9;
+    font-weight: bold;
+}
+
+.left {
+    left: calc(-3vw - 340px);
+}
+
+.right {
+    left: 3vw;
+}
+
+.dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background: blue;
+    border-radius: 50%;
+    z-index: 2;
+    top: 34%;
+}
+
+.years {
+    color: gray;
+    margin: 8px 0;
+}
+
+.educationBackgroundTop{
+    margin: 0;
+    width: 100vw;
+    height: 25vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.educationBackgroundBottom{
+    margin: 0;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+    top: -1px;
+    left: 0;
+}
+
+.projectContainer {
+    display: flex;
+    justify-content: center;
+    margin: 15px
+}
+
+.project{
+    margin: 0 2%;
+    width: 340px;
+    height: 225px;
+    background-color: brown;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.projectImage, .projectInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectImage {
+    background-color: #D9D9D9;
+}
+
+.projectInfo{
+    display: none;
+    color: white;
+    font-size: 20px;
+}
+
+.project:hover .projectInfo{
+    display: flex;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin:  0 15px;
+    padding: 5px;
+    width: 225px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects h2{
+    font-weight: 800;
+    font-size: 35px;
+    margin: 50px 0 10px 0;
+}
+
+.wrapper{
+    position: relative;
+    min-height: 100vh;
+}
+
+.backgroundFooter {
+    position: absolute;
+    display: block;
+    bottom: -10px;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: -1;
+    overflow: hidden;
+}
