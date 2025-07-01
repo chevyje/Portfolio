@@ -93,12 +93,19 @@
     font-size: 20px;
 }
 
+.educationContainer {
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+}
+
 .education {
     background-color: #0bb7f6;
     text-align: center;
     margin: 0;
     padding: 10px;
-    scroll-margin-top: 40px
+    scroll-margin-top: 40px;
+    position: relative;
 }
 
 .education h2 {
@@ -155,22 +162,22 @@
     margin: 8px 0;
 }
 
-.educationBackgroundTop{
-    margin: 0;
+.educationBackgroundTop svg{
     width: 100vw;
-    height: 25vh;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.educationBackgroundBottom{
-    margin: 0;
-    width: 100vw;
-    overflow: hidden;
+    height: auto;
     z-index: -1;
     position: relative;
-    top: -1px;
+    bottom: -5px;
     left: 0;
+}
+
+.educationBackgroundBottom svg{
+    position: relative;
+    top: -5px;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
+    overflow: hidden;
 }
 
 .projectContainer {
@@ -247,13 +254,11 @@
     min-height: 100vh;
 }
 
-.backgroundFooter {
+.backgroundFooter svg {
     position: absolute;
-    display: block;
-    bottom: -10px;
+    bottom: 0;
     left: 0;
     width: 100vw;
-    height: auto;
     z-index: -1;
     overflow: hidden;
 }
