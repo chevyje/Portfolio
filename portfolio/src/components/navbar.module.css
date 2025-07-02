@@ -26,6 +26,11 @@
     user-select: none;
 }
 
+.navigations a:hover {
+    background-color: #9FE5FF;
+    border-radius: 5px;
+}
+
 .hamburger{
     margin: auto 30px auto auto;
     display: none;

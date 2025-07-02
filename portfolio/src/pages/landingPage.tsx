@@ -3,9 +3,10 @@ import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
 import lang from "../lang/en.json";
 
-function LandingPage() {
-    const latestProjects = [...lang.projects1].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()).slice(0,3);
+import { NavLink } from "react-router-dom";
 
+function LandingPage() {
+    const latestProjects = [...lang.projectsObjects].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()).slice(0,3);
     return (
         <>
             <div className={Style.wrapper}>
@@ -39,16 +40,16 @@ function LandingPage() {
                         <h1>Jurre Blankers</h1>
                         <h2>{lang.function}</h2>
                             <div>
-                                <div className={Style.button} style={{ backgroundColor: '#0040FF', color: 'white'}}>{lang.moreButton} </div>
-                                <div className={Style.button} style={{ backgroundColor: 'white', color: '#0040FF', border: '2px solid #0040FF'}}>{lang.contactButton}</div>
+                                <a className={Style.button} style={{ backgroundColor: '#0040FF', color: 'white'}} href={"/#about"}>{lang.moreButton}</a>
+                                <NavLink className={Style.button} style={{ backgroundColor: 'white', color: '#0040FF', border: '2px solid #0040FF'}} to={"/contact"}>{lang.contactButton}</NavLink>
                             </div>
                         </div>
                     <div className={Style.picture}></div>
                 </div>
                 <div className={Style.socials}>
-                    <div><img src={"/icons/linked-in.svg"} alt={"linked in"} /></div>
-                    <div><img src={"/icons/github.svg"} alt={"github"} /></div>
-                    <div><img src={"/icons/discord.svg"} alt={"discord"} /></div>
+                    <a className={Style.social} href={"https://www.linkedin.com/in/jurre-blankers-34a5562ab/?trk=public-profile-join-page"} target={"_blank"} rel={"noopener noreferrer"}><img src={"/icons/linked-in.svg"} alt={"linked in"} /></a>
+                    <a className={Style.social} href={"https://github.com/chevyje"} target={"_blank"} rel={"noopener noreferrer"}><img src={"/icons/github.svg"} alt={"github"} /></a>
+                    <a className={Style.social} href={"https://discord.gg/dC4BYJ7sAe"} target={"_blank"} rel={"noopener noreferrer"}><img src={"/icons/discord.svg"} alt={"discord"} /></a>
                 </div>
 
                 {/*About section*/}
@@ -123,17 +124,17 @@ function LandingPage() {
 
                 {/*Latest Projects*/}
                 <div className={Style.projects}>
-                <h2>Latest Projects</h2>
-                <div className={Style.projectContainer}>
-                    {latestProjects.map((project, index) => (
-                        <div className={Style.project} key={index}>
-                            <div className={Style.projectImage}></div>
-                            <div className={Style.projectInfo}>{project.title}</div>
-                        </div>
-                    ))}
+                    <h2>{lang.latestProjects}</h2>
+                    <div className={Style.projectContainer}>
+                        {latestProjects.map((project, index) => (
+                            <div className={Style.project} key={index}>
+                                <div className={Style.projectImage}></div>
+                                <div className={Style.projectInfo}>{project.title}</div>
+                            </div>
+                        ))}
+                    </div>
+                    <NavLink className={Style.button} style={{border: '1px solid black', margin: '10px', color: "black"}} to={"/projects"}>More Projects</NavLink>
                 </div>
-                <div className={Style.button} style={{border: '1px solid black', margin: '10px'}}>More Projects</div>
-            </div>
 
                 <Footer />
                 {/*Background footer*/}
