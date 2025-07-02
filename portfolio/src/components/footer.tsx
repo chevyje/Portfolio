@@ -16,7 +16,7 @@ function footer (){
                     <a href="/">Projects</a>
                     <a href="/">Contact</a>
                 </div>
-                <div>
+                <div className={Style.copyRight}>
                     &#169; Sinds 2025 - Jurre Blankers
                 </div>
             </div>

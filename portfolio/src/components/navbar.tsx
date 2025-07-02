@@ -12,6 +12,7 @@ function navbar() {
                     <a href="/">Projects</a>
                     <a href="/">Contact</a>
                 </div>
+                <div className={Style.hamburger}><img src={"/icons/hamburger.svg"} alt={"hamburger"} width="30px" height="auto" /></div>
             </div>
         </>
     )

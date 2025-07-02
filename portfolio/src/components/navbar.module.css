@@ -28,3 +28,17 @@
     text-decoration: none;
     user-select: none;
 }
+
+.hamburger{
+    margin: auto 30px auto auto;
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    .navigations{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
