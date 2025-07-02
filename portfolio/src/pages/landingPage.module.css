@@ -1,7 +1,6 @@
 .background {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     z-index: -1;
     position: absolute;
     top: 0;
@@ -264,7 +263,7 @@
     overflow: hidden;
 }
 
-.midLarge, .mid .small{
+.midLarge, .mid, .small{
     display: none;
 }
 
