@@ -1,4 +1,5 @@
 import Style from "./navbar.module.css";
+import lang from "../lang/en.json"
 
 function navbar() {
     return (
@@ -6,12 +7,13 @@ function navbar() {
             <div className={Style.container}>
                 <div className={Style.logo}></div>
                 <div className={Style.navigations}>
-                    <a href="/">Home</a>
-                    <a href="/#about">About</a>
-                    <a href="/#education">Education</a>
-                    <a href="/">Projects</a>
-                    <a href="/">Contact</a>
+                    <a href="/">{lang.home}</a>
+                    <a href="/#about">{lang.about}</a>
+                    <a href="/#education">{lang.education}</a>
+                    <a href="/projects">{lang.projects}</a>
+                    <a href="/contact">{lang.contact}</a>
                 </div>
+                <div className={Style.hamburger}><img src={"/icons/hamburger.svg"} alt={"hamburger"} width="30px" height="auto" /></div>
             </div>
         </>
     )

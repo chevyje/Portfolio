@@ -1,7 +1,6 @@
 .background {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     z-index: -1;
     position: absolute;
     top: 0;
@@ -61,7 +60,7 @@
     margin-left: 20px;
 }
 
-.socials div{
+.social{
     background-color: #0040FF;
     width: 50px;
     height: 50px;
@@ -72,7 +71,12 @@
     align-items: center;
 }
 
-.socials div img{
+.social:hover{
+    background-color: #507CFF;
+    cursor: pointer;
+}
+
+.social img{
     width: 35px;
     height: 35px;
 }
@@ -167,7 +171,7 @@
     height: auto;
     z-index: -1;
     position: relative;
-    bottom: -5px;
+    bottom: -10px;
     left: 0;
 }
 
@@ -234,6 +238,7 @@
     height: 40px;
     font-size: 25px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .projects{
@@ -241,6 +246,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5vh;
 }
 
 .projects h2{
@@ -261,4 +267,201 @@
     width: 100vw;
     z-index: -1;
     overflow: hidden;
+}
+
+.midLarge, .mid, .small{
+    display: none;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+    .large, .mid{
+        display: none;
+    }
+    .midLarge {
+        display: block;
+    }
+    .homeContainer{
+        flex-direction: column;
+        align-items: center;
+        height: 85vh;
+    }
+    .intro{
+        margin: 5vh 0;
+        width: 100%;
+    }
+    .intro h1{
+        font-size: 70px;
+    }
+    .intro h2{
+        font-size: 45px;
+    }
+    .picture{
+        max-width: 325px;
+        max-height: 325px;
+        width: 35vw;
+        height: 35vw;
+    }
+    .background{
+        height: 99vh;
+    }
+    .about p {
+        font-size: 17px;
+        margin: 10px 0;
+    }
+    .project {
+        width: 250px;
+        height: 165px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .large, .midLarge{
+        display: none;
+    }
+    .mid{
+        display: block;
+    }
+    .homeContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro {
+        margin: 5vh;
+        width: 100%;
+    }
+    .intro h1{
+        font-size: 60px;
+        margin: 0 10px;
+    }
+    .intro h2{
+        font-size: 45px;
+        margin: 0 10px;
+    }
+    .button{
+        width: 150px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .picture{
+        width: 40vw;
+        height: 40vw;
+        min-width: 250px;
+        min-height: 250px;
+    }
+    .socials{
+        margin: 25px 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    .background{
+        height: 110vh;
+    }
+    .about h1{
+        font-size: 30px;
+    }
+    .about p{
+        font-size: 17px;
+        margin: 7px 0;
+    }
+
+    .timelineLine{
+        left: -170px;
+    }
+
+    .left, .right{
+        left: 6vw;
+    }
+
+    .projectContainer{
+        flex-direction: column;
+    }
+
+    .project{
+        margin: 10px 0;
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .large, .midLarge, .mid{
+        display: none;
+    }
+    .small{
+        display: block;
+    }
+
+    .homeContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro {
+        margin: 5vh;
+        width: 100%;
+    }
+    .intro h1{
+        font-size: 45px;
+        margin: 0 10px;
+    }
+    .intro h2{
+        font-size: 30px;
+        margin: 0 10px;
+    }
+    .button{
+        width: 100px;
+        height: 20px;
+        font-size: 15px;
+    }
+    .picture{
+        width: 250px;
+        height: 250px;
+    }
+    .socials{
+        margin: 0 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    .background{
+        height: 105vh;
+    }
+
+    .about h1{
+        font-size: 25px;
+    }
+    .about p{
+        font-size: 15px;
+        margin: 7px 0;
+    }
+
+    .timelineLine{
+        left: -120px;
+    }
+
+    .timelineCard{
+        width: 175px;
+    }
+
+    .educationTitle{
+        font-size: 17px;
+    }
+    .years{
+        font-size: 12px;
+    }
+    .educationSubtitle{
+        font-size: 15px;
+    }
+
+    .left, .right{
+        left: 10vw;
+    }
+
+    .projectContainer{
+        flex-direction: column;
+    }
+
+    .project{
+        margin: 10px 0;
+        width: 225px;
+        height: 150px;
+    }
 }

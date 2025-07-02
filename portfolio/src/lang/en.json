@@ -1,4 +1,10 @@
 {
+  "home": "Home",
+  "about": "About",
+  "education": "Education",
+  "projects": "Projects",
+  "contact": "Contact",
+
   "hey": "Hey, I'm",
   "function": "Software Developer",
   "moreButton": "See More",
@@ -10,21 +16,23 @@
   "paragraph3": "Outside of school, I’m active in scouting, which has taught me teamwork, organizing activities for groups, and taking time to relax. I also enjoy gaming, mainly as a way to unwind and have fun with friends. Besides that, I like spending time with friends, whether it’s doing something active or just hanging out. There hobbies help me to stay balanced and give me energy to keep learning and growing as a developer.",
   "paragraph4": "I’m excited about what the future will bring me, and I’m always open to new opportunities to grow, collaborate, and create meaningful digital solutions.",
 
-  "education": "Education",
   "educationPoints": [
     {
       "title": "Dr. Moller College",
       "years": "2019 - 2024",
-      "subtitle": "Havo"
+      "subtitle": "Havo",
+      "website": "https://www.drmollercollege.nl/"
     },
     {
       "title":"Hogeschool Utrecht",
       "years": "2024 - now",
-      "subtitle": "Bachelor's degree ICT"
+      "subtitle": "Bachelor's degree ICT",
+      "website": "https://www.hu.nl/voltijd-opleidingen/open-ict"
     }
   ],
-  "projects": "Projects",
-  "projects1": [
+
+  "latestProjects": "Latest Projects",
+  "projectsObjects": [
     {
       "title": "Test 1",
       "date": "29-06-2025"
@@ -37,5 +45,7 @@
       "title": "Test 3",
       "date": "29-06-2025"
     }
-  ]
+  ],
+
+  "copyRights": "Since 2025 - Jurre Blankers"
 }

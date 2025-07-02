@@ -1,6 +1,6 @@
 .container{
     background-color: white;
-    width: 100vw;
+    width: 100%;
     display: flex;
     height: 60px;
     align-items: center;
@@ -11,9 +11,6 @@
     border-radius: 5px;
     height: 45px;
     width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-left: 30px;
 }
 
@@ -27,4 +24,23 @@
     margin: 3px;
     text-decoration: none;
     user-select: none;
+}
+
+.navigations a:hover {
+    background-color: #9FE5FF;
+    border-radius: 5px;
+}
+
+.hamburger{
+    margin: auto 30px auto auto;
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    .navigations{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
 }

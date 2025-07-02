@@ -1,11 +1,14 @@
 import "./globalCss.css"
+import {BrowserRouter} from "react-router-dom";
 import LandingPage from "./pages/landingPage.tsx";
 
 function App() {
 
   return (
     <>
-        <LandingPage />
+        <BrowserRouter>
+            <LandingPage />
+        </BrowserRouter>
     </>
   )
 }
