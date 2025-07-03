@@ -45,6 +45,10 @@
     user-select: none;
 }
 
+.navigations a:hover{
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 480px){
     .navigations a {
         padding: 5px;
