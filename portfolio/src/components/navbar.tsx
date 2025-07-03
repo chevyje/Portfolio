@@ -3,7 +3,7 @@ import lang from "../lang/en.json"
 import { useState, useEffect } from "react";
 
 function navbar() {
-    const [dropDown, setDropDown] = useState<boolean>(true)
+    const [dropDown, setDropDown] = useState<boolean>(false)
     const toggleDropDown = () => {
         setDropDown(!dropDown);
     }
