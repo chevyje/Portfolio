@@ -1,23 +1,9 @@
-@font-face {
-    font-family: 'IstanbulPro';
-    src: url('/portfolio/public/fonts/istanbul/IstanbulProRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'IstanbulPro';
-    src: url('/portfolio/public/fonts/istanbul/IstanbulProBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'IstanbulPro', sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;

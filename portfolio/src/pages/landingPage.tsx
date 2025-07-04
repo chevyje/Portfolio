@@ -3,10 +3,22 @@ import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
 import lang from "../lang/en.json";
 
+// React imports
 import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function LandingPage() {
     const latestProjects = [...lang.projectsObjects].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()).slice(0,3);
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const el = document.querySelector(hash);
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [hash]);
+
     return (
         <>
             <div className={Style.wrapper}>
@@ -41,7 +53,7 @@ function LandingPage() {
                         <h2>{lang.function}</h2>
                             <div>
                                 <a className={Style.button} style={{ backgroundColor: '#0040FF', color: 'white'}} href={"/#about"}>{lang.moreButton}</a>
-                                <NavLink className={Style.button} style={{ backgroundColor: 'white', color: '#0040FF', border: '2px solid #0040FF'}} to={"/contact"}>{lang.contactButton}</NavLink>
+                                <NavLink className={Style.button} style={{ backgroundColor: 'white', color: '#0040FF', border: '2px solid #0040FF'}} to={"/contact"}>{lang.contactMe}</NavLink>
                             </div>
                         </div>
                     <div className={Style.picture}></div>

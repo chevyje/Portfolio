@@ -8,7 +8,7 @@
   "hey": "Hey, I'm",
   "function": "Software Developer",
   "moreButton": "See More",
-  "contactButton": "Contact Me",
+  "contactMe": "Contact Me",
 
   "aboutMe": "About Me",
   "paragraph1": "My name is Jurre Blankers, an 18 year old ICT student at the Hogeschool Utrecht. After graduating from havo in 2024, i decided to pursue my passion for technology by starting a bachelor’s degree in ICT.",
@@ -46,6 +46,12 @@
       "date": "29-06-2025"
     }
   ],
+
+  "contactMessage": "Any questions or remarks? Just write me a message!",
+  "Name": "Name",
+  "Email": "Email",
+  "Message": "Message",
+  "Submit": "Submit",
 
   "copyRights": "Since 2025 - Jurre Blankers"
 }

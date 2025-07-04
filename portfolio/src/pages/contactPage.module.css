@@ -1,0 +1,154 @@
+.wrapper{
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contactFormContainer{
+    margin: 80px auto 0 auto;
+    background-image: url("../../public/background/contactFormLarge.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 20px;
+    width: 860px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactFormContainer h1{
+    font-size: 50px;
+}
+
+.contactFormContainer h2{
+    font-size: 20px;
+}
+
+.contactForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    margin: 30px auto;
+}
+
+.contactForm input{
+    width: 80%;
+    margin: 0 0 10px 0;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 4px;
+}
+
+.contactForm input:focus{
+    border: none;
+    outline: 1px solid black;
+}
+
+.contactForm input[type='submit']{
+    background-color: #0040FF;
+    width: 25%;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px 20px;
+}
+
+.contactForm textarea{
+    width: 80%;
+    resize: none;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    padding: 8px 4px;
+}
+
+.contactForm textarea:focus{
+    border: none;
+    outline: 1px solid black;
+}
+
+.contactForm label{
+    margin: 0 auto 0 10%
+}
+
+.icon{
+    background: #0BB7F6;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.contactPoint{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+.contactInfoContainer{
+    display: flex;
+    justify-content: center;
+    margin: 80px auto;
+}
+
+.footer{
+    margin-top: auto;
+}
+
+.backgroundFooter svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.midLarge, .mid, .small {
+    display: none;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+    .large{
+        display: none;
+    }
+    .midLarge {
+        display: block;
+    }
+    .contactFormContainer{
+        background-image: url("../../public/background/contactFormMidLarge.svg");
+        margin: 50px auto 0 auto;
+        width: 660px;
+    }
+
+    .contactForm{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contactFormContainer{
+        display: none;
+    }
+    .contactInfoContainer{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+    .backgroundFooter{
+        display: none;
+    }
+}
