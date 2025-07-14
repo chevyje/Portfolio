@@ -34,16 +34,24 @@
   "latestProjects": "Latest Projects",
   "projectsObjects": [
     {
+      "id": "1",
       "title": "Test 1",
       "date": "29-06-2025"
     },
     {
+      "id": "2",
       "title": "Test 2",
       "date": "30-06-2025"
     },
     {
+      "id": "3",
       "title": "Test 3",
       "date": "29-06-2025"
+    },
+    {
+      "id": "4",
+      "title": "Test 4",
+      "date": "14-07-2025"
     }
   ],
 
