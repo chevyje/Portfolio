@@ -2,8 +2,24 @@ import Style from "./contactPage.module.css"
 import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
 import lang from "../lang/en.json"
+import * as React from "react";
+import {sendContactEmail} from "../scripts/emailjs.ts";
+
 
 function ContactPage() {
+    const sendEmail = (e: React.FormEvent) => {
+        e.preventDefault()
+        console.log("sending email...");
+        const formData = new FormData(e.target as HTMLFormElement);
+        const formValues = {
+            name: formData.get("name") as string,
+            email: formData.get("email") as string,
+            message: formData.get("message") as string,
+        }
+
+        console.log(formValues);
+        sendContactEmail(formValues);
+    }
     return (
         <>
             <div className={Style.wrapper}>
@@ -11,13 +27,13 @@ function ContactPage() {
                 <div className={Style.contactFormContainer}>
                     <h1>{lang.contactMe}</h1>
                     <h2>{lang.contactMessage}</h2>
-                    <form className={Style.contactForm} noValidate>
+                    <form className={Style.contactForm} onSubmit={sendEmail} noValidate>
                         <label>{lang.Name}</label>
-                        <input type={"text"} />
+                        <input name={"name"} type={"text"} />
                         <label>{lang.Email}</label>
-                        <input type={"email"} />
+                        <input name={"email"} type={"email"} />
                         <label>{lang.Message}</label>
-                        <textarea rows={4} cols={50}></textarea>
+                        <textarea name={"message"} rows={4} cols={50}></textarea>
                         <input type="submit" value={lang.Submit} />
                     </form>
                 </div>
