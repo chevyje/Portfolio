@@ -21,6 +21,7 @@
     height: 50px;
     border-radius: 50%;
     background-color: #0040FF;
+    user-select: none;
 }
 
 .social:hover{
@@ -47,6 +48,10 @@
 
 .navigations a:hover{
     font-weight: bold;
+}
+
+.copyRight{
+    user-select: none;
 }
 
 @media only screen and (max-width: 480px){

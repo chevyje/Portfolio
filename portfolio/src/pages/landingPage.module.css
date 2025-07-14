@@ -69,6 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .social:hover{
@@ -104,12 +105,14 @@
 }
 
 .education {
-    background-color: #0bb7f6;
+    background-image: url("../../public/background/education/educationLarge.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     text-align: center;
-    margin: 0;
-    padding: 10px;
+    padding: 10%;
     scroll-margin-top: 40px;
     position: relative;
+    height: auto;
 }
 
 .education h2 {
@@ -173,6 +176,7 @@
     position: relative;
     bottom: -10px;
     left: 0;
+    display: none;
 }
 
 .educationBackgroundBottom svg{
@@ -182,6 +186,7 @@
     width: 100vw;
     z-index: -1;
     overflow: hidden;
+    display: none;
 }
 
 .projectContainer {
@@ -194,7 +199,6 @@
     margin: 0 2%;
     width: 340px;
     height: 225px;
-    background-color: brown;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
@@ -239,6 +243,7 @@
     font-size: 25px;
     font-weight: bold;
     text-decoration: none;
+    user-select: none;
 }
 
 .projects{
@@ -280,6 +285,11 @@
     .midLarge {
         display: block;
     }
+    .education{
+        background-image: url("../../public/background/education/educationMidLarge.svg");
+        padding: 8%;
+    }
+
     .homeContainer{
         flex-direction: column;
         align-items: center;
@@ -313,13 +323,16 @@
         height: 165px;
     }
 }
-
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     .large, .midLarge{
         display: none;
     }
     .mid{
         display: block;
+    }
+    .education{
+        background-image: url("../../public/background/education/educationMid.svg");
+        padding: 13%;
     }
     .homeContainer{
         flex-direction: column;
@@ -389,7 +402,10 @@
     .small{
         display: block;
     }
-
+    .education{
+        background-image: url("../../public/background/education/educationSmall.svg");
+        padding: 12%
+    }
     .homeContainer{
         flex-direction: column;
         align-items: center;
