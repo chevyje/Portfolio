@@ -61,5 +61,13 @@
   "Message": "Message",
   "Submit": "Submit",
 
-  "copyRights": "Since 2025 - Jurre Blankers"
+  "copyRights": "Since 2025 - Jurre Blankers",
+
+  "ErrorMessages": {
+    "Invalid": {
+      "Name": "This name is too short or invalid!",
+      "Email": "This email is invalid!",
+      "Message": "The message is too short or invalid!"
+    }
+  }
 }
