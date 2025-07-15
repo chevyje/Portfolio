@@ -3,7 +3,61 @@ import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
 import lang from "../lang/en.json"
 
+import * as React from "react";
+import {sendContactEmail} from "../scripts/emailjs.ts";
+import * as validator from 'email-validator';
+
 function ContactPage() {
+    const [errorName, setErrorName] = React.useState<string>("");
+    const [errorEmail, setErrorEmail] = React.useState<string>("");
+    const [errorMessage, setErrorMessage] = React.useState<string>("");
+
+    const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
+        const form = event.currentTarget as HTMLFormElement;
+        const nameInput = form.elements.namedItem("name") as HTMLInputElement;
+        const name = nameInput.value.trim();
+        const emailInput = form.elements.namedItem("email") as HTMLInputElement;
+        const email = emailInput.value.trim();
+        const messageInput = form.elements.namedItem("message") as HTMLTextAreaElement;
+        const message = messageInput.value;
+
+        let invalidCount = 0;
+        if(name.trim().length <= 1){
+            nameInput.style.border = "1px solid red";
+            setErrorName(`* ${lang.ErrorMessages.Invalid.Name}`);
+            invalidCount++;
+        } else{
+            nameInput.style.border = "none";
+            setErrorName(``);
+        }
+        if(!validator.validate(email)) {
+            emailInput.style.border = "1px solid red";
+            setErrorEmail(`* ${lang.ErrorMessages.Invalid.Email}`);
+            invalidCount++;
+        } else{
+            emailInput.style.border = "none";
+            setErrorEmail(``);
+        }
+        if(message.trim().length <= 10){
+            messageInput.style.border = "1px solid red";
+            setErrorMessage(`* ${lang.ErrorMessages.Invalid.Message}`);
+            invalidCount++;
+        } else{
+            messageInput.style.border = "none";
+            setErrorMessage(``);
+        }
+
+        const formValues = {
+            name: name,
+            email: email,
+            message: message,
+        }
+
+        if(invalidCount <= 0){
+            sendContactEmail(formValues);
+        }
+    }
     return (
         <>
             <div className={Style.wrapper}>
@@ -11,13 +65,16 @@ function ContactPage() {
                 <div className={Style.contactFormContainer}>
                     <h1>{lang.contactMe}</h1>
                     <h2>{lang.contactMessage}</h2>
-                    <form className={Style.contactForm} noValidate>
+                    <form className={Style.contactForm} onSubmit={sendEmail} noValidate>
                         <label>{lang.Name}</label>
-                        <input type={"text"} />
+                        <input name={"name"} type={"text"} />
+                        <p>{errorName}</p>
                         <label>{lang.Email}</label>
-                        <input type={"email"} />
+                        <input name={"email"} type={"email"} />
+                        <p>{errorEmail}</p>
                         <label>{lang.Message}</label>
-                        <textarea rows={4} cols={50}></textarea>
+                        <textarea name={"message"} rows={4} cols={50}></textarea>
+                        <p>{errorMessage}</p>
                         <input type="submit" value={lang.Submit} />
                     </form>
                 </div>

@@ -1,10 +1,11 @@
 import Style from "./footer.module.css"
 import lang from "../lang/en.json"
+import * as React from "react";
 
-function footer (){
+function footer ({ style }: { style?: React.CSSProperties }) {
     return (
         <>
-            <div className={Style.container}>
+            <div className={Style.container} style={style}>
                 <div className={Style.socials}>
                     <a className={Style.social} href={"https://www.linkedin.com/in/jurre-blankers-34a5562ab/?trk=public-profile-join-page"} target={"_blank"} rel={"noopener noreferrer"}><img src={"/icons/linked-in.svg"} alt={"linked in"} /></a>
                     <a className={Style.social} href={"https://github.com/chevyje"} target={"_blank"} rel={"noopener noreferrer"}><img src={"/icons/github.svg"} alt={"github"} /></a>
