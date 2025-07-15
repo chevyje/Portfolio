@@ -107,27 +107,6 @@ function LandingPage() {
                 </div>
 
                 <Footer />
-                {/*Background footer*/}
-                <div className={`${Style.backgroundFooter} ${Style.large}`}>
-                    <svg width="1920" height="268" viewBox="0 0 1920 268" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1107.5 91.0003C1002.17 97.5154 671 0.00146484 451 0.00146484C306 0.00146484 54 108.998 0 141.998V267.998H1920V83.5021C1822.5 26.5 1706 1.5 1643.5 3C1477.05 6.99485 1253 82 1107.5 91.0003Z" fill="#0BB7F6"/>
-                    </svg>
-                </div>
-                <div className={`${Style.backgroundFooter} ${Style.midLarge}`}>
-                    <svg width="769" height="231" viewBox="0 0 769 231" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M443.163 46.5023C392.932 54.2601 242.595 13.5002 169.5 13.5002C96.4049 13.5002 23.7083 50.5002 0 82.0002V231.001H769V46.5023C769 46.5023 701 7.27178e-05 657.5 0C614 -7.27176e-05 493.393 38.7445 443.163 46.5023Z" fill="#0BB7F6"/>
-                    </svg>
-                </div>
-                <div className={`${Style.backgroundFooter} ${Style.mid}`}>
-                    <svg width="481" height="229" viewBox="0 0 481 229" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M87 12.2786C39.909 12.2786 2.4 34.2999 0 37.4999V229H481V2C481 2 478 1.27145 473.5 0.778709C405 -6.72187 348.567 42.4138 270.5 42.7784C197.116 43.1212 153.5 12.2786 87 12.2786Z" fill="#0BB7F6"/>
-                    </svg>
-                </div>
-                <div className={`${Style.backgroundFooter} ${Style.small}`}>
-                    <svg width="320" height="201" viewBox="0 0 320 201" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M57.8794 10.7773C26.5507 10.7773 1.59667 30.106 0 32.9148V201H320V1.75546C320 1.75546 318.004 1.11599 315.01 0.683496C269.439 -5.89999 231.895 37.2279 179.958 37.5479C131.138 37.8487 102.121 10.7773 57.8794 10.7773Z" fill="#0BB7F6"/>
-                    </svg>
-                </div>
             </div>
         </>
     )
