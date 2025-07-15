@@ -11,18 +11,21 @@ function projectsPage() {
 
     return (
         <>
-            <Navbar />
-            <div className={Style.projectsContainer}>
-                <div className={Style.projectContainer}>
-                    {latestProjects.map((project, index) => (
-                        <div className={Style.project} key={index} onClick={() => navigate(`/project/${project.id}`)}>
-                            <div className={Style.projectImage}></div>
-                            <div className={Style.projectInfo}>{project.title}</div>
-                        </div>
-                    ))}
+            <div className={Style.wrapper}>
+                <Navbar />
+                <h1 className={Style.title}>Projects</h1>
+                <div className={Style.projectsContainer}>
+                    <div className={Style.projectContainer}>
+                        {latestProjects.map((project, index) => (
+                            <div className={Style.project} key={index} onClick={() => navigate(`/project/${project.id}`)}>
+                                <div className={Style.projectImage}></div>
+                                <div className={Style.projectInfo}>{project.title}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                <Footer style={{ margin: "auto 0 0 0" }}/>
             </div>
-            <Footer />
         </>
     )
 }
