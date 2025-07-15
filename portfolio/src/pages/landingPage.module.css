@@ -169,29 +169,11 @@
     margin: 8px 0;
 }
 
-.educationBackgroundTop svg{
-    width: 100vw;
-    height: auto;
-    z-index: -1;
-    position: relative;
-    bottom: -10px;
-    left: 0;
-    display: none;
-}
-
-.educationBackgroundBottom svg{
-    position: relative;
-    top: -5px;
-    left: 0;
-    width: 100vw;
-    z-index: -1;
-    overflow: hidden;
-    display: none;
-}
-
 .projectContainer {
+    width: 80vw;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 15px
 }
 
@@ -508,5 +490,15 @@
     }
     .background{
         height: 62vh;
+    }
+}
+@media (hover: none){
+    .projectInfo{
+        display: flex;
+        background-color: black;
+        opacity: 0.5;
+        height: 20%;
+        bottom: 0;
+        top: auto;
     }
 }

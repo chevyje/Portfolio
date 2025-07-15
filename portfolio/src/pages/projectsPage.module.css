@@ -1,5 +1,5 @@
 .projectContainer {
-    width: 80vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -40,4 +40,15 @@
     display: flex;
     background-color: black;
     opacity: 0.5;
+}
+
+@media (hover: none){
+    .projectInfo{
+        display: flex;
+        background-color: black;
+        opacity: 0.5;
+        height: 20%;
+        bottom: 0;
+        top: auto;
+    }
 }

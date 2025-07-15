@@ -7,10 +7,12 @@ import lang from "../lang/en.json";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 function LandingPage() {
     const latestProjects = [...lang.projectsObjects].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()).slice(0,3);
     const { hash } = useLocation();
+    let navigate = useNavigate();
 
     useEffect(() => {
         if (hash) {
@@ -95,7 +97,7 @@ function LandingPage() {
                     <h2>{lang.latestProjects}</h2>
                     <div className={Style.projectContainer}>
                         {latestProjects.map((project, index) => (
-                            <div className={Style.project} key={index}>
+                            <div className={Style.project} key={index} onClick={() => navigate(`/project/${project.id}`)}>
                                 <div className={Style.projectImage}></div>
                                 <div className={Style.projectInfo}>{project.title}</div>
                             </div>
