@@ -1,9 +1,7 @@
 .wrapper{
-    flex-direction: column;
     min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .contactFormContainer{
@@ -101,6 +99,7 @@
     flex-direction: column;
     align-items: center;
     width: 20%;
+    min-width: 200px;
 }
 
 .contactInfoContainer{
@@ -109,30 +108,7 @@
     margin: 80px auto;
 }
 
-.footer{
-    margin-top: auto;
-}
-
-.backgroundFooter svg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.midLarge, .mid, .small {
-    display: none;
-}
-
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
-    .large{
-        display: none;
-    }
-    .midLarge {
-        display: block;
-    }
     .contactFormContainer{
         background-image: url("../../public/background/contactForm/contactFormMidLarge.svg");
         margin: 50px auto 0 auto;
@@ -143,18 +119,40 @@
         width: 80%;
     }
 }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
     .contactFormContainer{
-        display: none;
+        background-image: url("../../public/background/contactForm/contactFormMid.svg");
+        width: 55%;
+        min-width: 400px;
+    }
+    .contactForm{
+        width: 90%;
+    }
+
+    .contactForm input[type='submit']{
+        width: 30%;
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .contactFormContainer{
+        background-image: url("../../public/background/contactForm/contactFormSmall.svg");
+        width: 55%;
+        min-width: 300px;
+    }
+    .contactForm{
+        width: 95%;
+    }
+
+    .contactForm input[type='submit']{
+        width: 40%;
+        font-size: 17px;
     }
     .contactInfoContainer{
-        display: none;
+        flex-direction: column;
+        margin: 40px auto;
     }
-    .footer{
-        display: none;
-    }
-    .backgroundFooter{
-        display: none;
+    .contactPoint{
+        margin: 10px 0;
     }
 }
