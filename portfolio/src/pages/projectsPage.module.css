@@ -2,6 +2,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url("../../public/background/projects.svg");
+    background-position: center;
 }
 
 .title{
