@@ -9,7 +9,7 @@ function projectPage() {
     const { id } = useParams();
     let navigate = useNavigate();
     const project = [...lang.projectsObjects].find((project) => project.id === id);
-    if (!project) { return navigate("/projects"); }
+    if (!project) { navigate("/projects"); return null; }
     return (
         <>
             <Navbar />
