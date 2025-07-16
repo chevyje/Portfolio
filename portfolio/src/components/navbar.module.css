@@ -45,6 +45,10 @@
     height: auto;
     z-index: 999;
     border-radius: 0 0 0 15px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
 
 .cross{
