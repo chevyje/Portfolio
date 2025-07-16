@@ -138,10 +138,14 @@
     .contactFormContainer{
         background-image: url("../../public/background/contactForm/contactFormSmall.svg");
         width: 55%;
-        min-width: 300px;
+        min-width: 260px;
     }
     .contactForm{
         width: 95%;
+    }
+
+    .contactFormContainer h1{
+        font-size: 40px;
     }
 
     .contactForm input[type='submit']{
