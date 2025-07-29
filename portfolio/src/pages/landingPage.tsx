@@ -98,7 +98,7 @@ function LandingPage() {
                     <div className={Style.projectContainer}>
                         {latestProjects.map((project, index) => (
                             <div className={Style.project} key={index} onClick={() => navigate(`/project/${project.id}`)}>
-                                <div className={Style.projectImage}></div>
+                                <img src={`/pictures/${project.image}`} alt={project.image} className={Style.projectImage}/>
                                 <div className={Style.projectInfo}>{project.title}</div>
                             </div>
                         ))}
