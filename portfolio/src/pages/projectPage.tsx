@@ -16,7 +16,7 @@ function projectPage() {
                 <Navbar />
                 <h1 className={Style.title}>{project.title}</h1>
                 <p className={Style.description}><img src={`/pictures/${project.image}`} alt={project.image} className={Style.image}/>{project.description}</p>
-                <a className={Style.button} style={{ backgroundColor: '#0BB7F6', color: 'white', }} href={"https://www.github.com"} target={"_blank"} rel={"noopener noreferrer"}>{lang.moreButton}</a>
+                {project.url != "" && <a className={Style.button} style={{ backgroundColor: '#0BB7F6', color: 'white', }} href={project.url} target={"_blank"} rel={"noopener noreferrer"}>{lang.moreButton}</a>}
                 <Footer style={{ margin: "auto 0 0 0" }}/>
             </div>
         </>

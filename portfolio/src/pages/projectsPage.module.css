@@ -26,6 +26,7 @@
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    border: 1px solid black;
 }
 
 .projectImage, .projectInfo {
@@ -53,6 +54,7 @@
     display: flex;
     background-color: black;
     opacity: 0.5;
+    cursor: pointer;
 }
 
 @media (hover: none){
