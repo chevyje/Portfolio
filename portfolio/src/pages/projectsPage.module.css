@@ -42,12 +42,14 @@
 
 .projectImage {
     background-color: #D9D9D9;
+    user-select: none;
 }
 
 .projectInfo{
     display: none;
     color: white;
     font-size: 20px;
+    user-select: none;
 }
 
 .project:hover .projectInfo{

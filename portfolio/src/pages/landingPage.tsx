@@ -81,7 +81,7 @@ function LandingPage() {
                     <div className={Style.timelineLine}>
                         {lang.educationPoints.map((item, index) => (
                             <div className={Style.timelineEntry} key={index}>
-                                <div className={`${Style.timelineCard} ${index % 2 === 0 ? Style.left : Style.right}`} >
+                                <div onClick={(event) => ExternalLink(item.website, event)} className={`${Style.timelineCard} ${index % 2 === 0 ? Style.left : Style.right}`}>
                                     <h3 className={Style.educationTitle}>{item.title}</h3>
                                     <p className={Style.years}>{item.years}</p>
                                     <p className={Style.educationSubtitle}>{item.subtitle}</p>
@@ -116,4 +116,10 @@ export default LandingPage;
 function parseDate(str: string) {
     const [day, month, year] = str.split("-");
     return new Date(`${year}-${month}-${day}`);
+}
+
+function ExternalLink (link: string, event: any) {
+    if (link && event) {
+        window.open(link);
+    }
 }
