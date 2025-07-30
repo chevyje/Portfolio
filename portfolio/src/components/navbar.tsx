@@ -1,8 +1,10 @@
 import Style from "./navbar.module.css";
 import lang from "../lang/en.json"
 import { useState, useEffect } from "react";
+import {useNavigate} from "react-router";
 
 function navbar() {
+    const navigate = useNavigate();
     const [dropDown, setDropDown] = useState<boolean>(false)
     const toggleDropDown = () => {
         setDropDown(!dropDown);
@@ -15,10 +17,15 @@ function navbar() {
             document.body.style.overflowY = "auto";
         }
     }, [dropDown]);
+
+    const navigateHome = () => {
+        navigate("/");
+    }
+
     return (
         <>
             <div className={Style.container}>
-                <div className={Style.logo}></div>
+                <div className={Style.logo} onClick={navigateHome}><img src={"/icons/logo.svg"} alt={"logo"}/></div>
                 <div className={Style.navigations}>
                     <a href="/">{lang.home}</a>
                     <a href="/#about">{lang.about}</a>
