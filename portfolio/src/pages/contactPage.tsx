@@ -63,29 +63,29 @@ function ContactPage() {
             <div className={Style.wrapper}>
                 <Navbar />
                 <div className={Style.contactFormContainer}>
-                    <h1>{lang.contactMe}</h1>
-                    <h2>{lang.contactMessage}</h2>
+                    <h1>{lang.contactPage.contactMe}</h1>
+                    <h2>{lang.contactPage.contactMessage}</h2>
                     <form className={Style.contactForm} onSubmit={sendEmail} noValidate>
-                        <label>{lang.Name}</label>
+                        <label>{lang.contactPage.name}</label>
                         <input name={"name"} type={"text"} />
                         <p>{errorName}</p>
-                        <label>{lang.Email}</label>
+                        <label>{lang.contactPage.email}</label>
                         <input name={"email"} type={"email"} />
                         <p>{errorEmail}</p>
-                        <label>{lang.Message}</label>
+                        <label>{lang.contactPage.message}</label>
                         <textarea name={"message"} rows={4} cols={50}></textarea>
                         <p>{errorMessage}</p>
-                        <input type="submit" value={lang.Submit} />
+                        <input type="submit" value={lang.contactPage.submit} />
                     </form>
                 </div>
                 <div className={Style.contactInfoContainer}>
                     <div className={Style.contactPoint}>
                         <div className={Style.icon}><img src={"/icons/phone.svg"} alt={"Phone"} /></div>
-                        <p>+31 625581200</p>
+                        <p>{lang.contactPage["phone number"]}</p>
                     </div>
                     <div className={Style.contactPoint}>
                         <div className={Style.icon}><img src={"/icons/mail.svg"} alt={"Mail"} /></div>
-                        <p>jurre.blankers@gmail.com</p>
+                        <p>{lang.contactPage.mail}</p>
                     </div>
                 </div>
                 <Footer style={{ margin: "auto 0 0 0" }} />

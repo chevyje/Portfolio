@@ -50,12 +50,12 @@ function LandingPage() {
                 {/*Intro with picture and socials*/}
                 <div className={Style.homeContainer}>
                     <div className={Style.intro}>
-                        <h6>{lang.hey}</h6>
-                        <h1>Jurre Blankers</h1>
-                        <h2>{lang.function}</h2>
+                        <h6>{lang.landingPage.hey}</h6>
+                        <h1>{lang.landingPage.Jurre}</h1>
+                        <h2>{lang.landingPage.function}</h2>
                             <div>
-                                <a className={Style.button} style={{ backgroundColor: '#0040FF', color: 'white'}} href={"/#about"}>{lang.moreButton}</a>
-                                <NavLink className={Style.button} style={{ backgroundColor: 'white', color: '#0040FF', border: '2px solid #0040FF'}} to={"/contact"}>{lang.contactMe}</NavLink>
+                                <a className={Style.button} style={{ backgroundColor: '#0040FF', color: 'white'}} href={"/#about"}>{lang.landingPage.moreButton}</a>
+                                <NavLink className={Style.button} style={{ backgroundColor: 'white', color: '#0040FF', border: '2px solid #0040FF'}} to={"/contact"}>{lang.landingPage.contactMe}</NavLink>
                             </div>
                         </div>
                     <div className={Style.picture}></div>
@@ -68,11 +68,11 @@ function LandingPage() {
 
                 {/*About section*/}
                 <div className={Style.about} id={"about"}>
-                    <h1>{lang.aboutMe}</h1>
-                    <p>{lang.paragraph1}</p>
-                    <p>{lang.paragraph2}</p>
-                    <p>{lang.paragraph3}</p>
-                    <p>{lang.paragraph4}</p>
+                    <h1>{lang.landingPage.aboutMe}</h1>
+                    <p>{lang.landingPage.paragraph1}</p>
+                    <p>{lang.landingPage.paragraph2}</p>
+                    <p>{lang.landingPage.paragraph3}</p>
+                    <p>{lang.landingPage.paragraph4}</p>
                 </div>
 
                 {/*education section*/}

@@ -12,11 +12,11 @@ function footer ({ style }: { style?: React.CSSProperties }) {
                     <a className={Style.social} href={"https://discord.gg/dC4BYJ7sAe"} target={"_blank"} rel={"noopener noreferrer"}><img src={"/icons/discord.svg"} alt={"discord"} /></a>
                 </div>
                 <div className={Style.navigations}>
-                    <a href="/">{lang.home}</a>
-                    <a href="/#about">{lang.about}</a>
-                    <a href="/#education">{lang.education}</a>
-                    <a href="/projects">{lang.projects}</a>
-                    <a href="/contact">{lang.contact}</a>
+                    <a href="/">{lang.navigations.home}</a>
+                    <a href="/#about">{lang.navigations.about}</a>
+                    <a href="/#education">{lang.navigations.education}</a>
+                    <a href="/projects">{lang.navigations.projects}</a>
+                    <a href="/contact">{lang.navigations.contact}</a>
                 </div>
                 <div className={Style.copyRight}>
                     &#169; {lang.copyRights}
