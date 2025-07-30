@@ -4,18 +4,15 @@
   "education": "Education",
   "projects": "Projects",
   "contact": "Contact",
-
   "hey": "Hey, I'm",
   "function": "Software Developer",
   "moreButton": "See More",
   "contactMe": "Contact Me",
-
   "aboutMe": "About Me",
   "paragraph1": "My name is Jurre Blankers, an 18 year old ICT student at the Hogeschool Utrecht. After graduating from havo in 2024, i decided to pursue my passion for technology by starting a bachelor’s degree in ICT.",
   "paragraph2": "I’ve been fascinated by how things work for quite a while now, especially when it comes to computers and coding. programming gives me the creative freedom to build, solve problems, and continuously innovate. It’s something I enjoy both in my study and in my free time.",
   "paragraph3": "Outside of school, I’m active in scouting, which has taught me teamwork, organizing activities for groups, and taking time to relax. I also enjoy gaming, mainly as a way to unwind and have fun with friends. Besides that, I like spending time with friends, whether it’s doing something active or just hanging out. There hobbies help me to stay balanced and give me energy to keep learning and growing as a developer.",
   "paragraph4": "I’m excited about what the future will bring me, and I’m always open to new opportunities to grow, collaborate, and create meaningful digital solutions.",
-
   "educationPoints": [
     {
       "title": "Dr. Moller College",
@@ -24,55 +21,29 @@
       "website": "https://www.drmollercollege.nl/"
     },
     {
-      "title":"Hogeschool Utrecht",
+      "title": "Hogeschool Utrecht",
       "years": "2024 - now",
       "subtitle": "Bachelor's degree ICT",
       "website": "https://www.hu.nl/voltijd-opleidingen/open-ict"
     }
   ],
-
   "latestProjects": "Latest Projects",
   "projectsObjects": [
     {
       "id": "1",
       "title": "Dumaco",
       "description": "",
-      "image": "",
-      "url": "",
-      "date": "09-02-2025"
-    },
-    {
-      "id": "2",
-      "title": "Dumaco",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur porttitor nunc in malesuada. Sed bibendum laoreet purus et dictum. Proin et nisl vestibulum, ultricies neque eget, convallis lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer cursus fringilla vestibulum. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam at odio sit amet lacus mollis eleifend. Praesent laoreet leo in nunc aliquet, non viverra lacus sagittis. Aenean id lorem interdum, gravida dui nec, rhoncus magna. Duis malesuada tincidunt tortor, non fringilla risus vestibulum pellentesque. Praesent in mauris molestie purus efficitur iaculis et id sapien. Vivamus at porta arcu, eget ultricies quam. Quisque ut nulla semper, porta dui ac, pharetra magna. Vestibulum rhoncus luctus ornare. Vivamus porttitor ex enim, nec gravida nibh luctus et.\n\nVivamus elementum aliquet turpis, non bibendum nunc. Nulla euismod nibh a tellus sodales, sit amet ornare dolor hendrerit. Fusce semper congue nulla non pulvinar. Donec ex justo, luctus id lacus in, sodales viverra mauris. Mauris maximus aliquam leo. Praesent enim libero, aliquet non lacinia ut, posuere sed tortor. Sed eget imperdiet nulla. Nam sagittis orci in orci facilisis, a venenatis elit sollicitudin. Nam id sodales arcu. Duis placerat dapibus massa, in sollicitudin ante.",
       "image": "dumaco.png",
-      "url": "https://www.github.com",
-      "date": "30-06-2025"
-    },
-    {
-      "id": "3",
-      "title": "Test 3",
-      "description": "",
-      "url": "",
-      "date": "16-07-2025"
-    },
-    {
-      "id": "4",
-      "title": "Test 4",
-      "description": "",
-      "url": "",
-      "date": "14-07-2025"
+      "url": "https://github.com/chevyje/Dumaco",
+      "date": "06-02-2025"
     }
   ],
-
   "contactMessage": "Any questions or remarks? Just write me a message!",
   "Name": "Name",
   "Email": "Email",
   "Message": "Message",
   "Submit": "Submit",
-
   "copyRights": "Since 2025 - Jurre Blankers",
-
   "ErrorMessages": {
     "Invalid": {
       "Name": "This name is too short or invalid!",
