@@ -4,6 +4,20 @@
   "education": "Education",
   "projects": "Projects",
   "contact": "Contact",
+
+  "landingPage": {
+    "hey": "Hey, I'm",
+    "Jurre": "Jurre Blankers",
+    "function": "Software Developer",
+    "moreButton": "See More",
+    "contactMe": "Contact Me",
+    "aboutMe": "About Me",
+    "paragraph1": "My name is Jurre Blankers, an 18 year old ICT student at the Hogeschool Utrecht. After graduating from havo in 2024, i decided to pursue my passion for technology by starting a bachelor’s degree in ICT.",
+    "paragraph2": "I’ve been fascinated by how things work for quite a while now, especially when it comes to computers and coding. programming gives me the creative freedom to build, solve problems, and continuously innovate. It’s something I enjoy both in my study and in my free time.",
+    "paragraph3": "Outside of school, I’m active in scouting, which has taught me teamwork, organizing activities for groups, and taking time to relax. I also enjoy gaming, mainly as a way to unwind and have fun with friends. Besides that, I like spending time with friends, whether it’s doing something active or just hanging out. There hobbies help me to stay balanced and give me energy to keep learning and growing as a developer.",
+    "paragraph4": "I’m excited about what the future will bring me, and I’m always open to new opportunities to grow, collaborate, and create meaningful digital solutions."
+  },
+
   "hey": "Hey, I'm",
   "function": "Software Developer",
   "moreButton": "See More",
@@ -44,11 +58,19 @@
   "Message": "Message",
   "Submit": "Submit",
   "copyRights": "Since 2025 - Jurre Blankers",
+
   "ErrorMessages": {
     "Invalid": {
       "Name": "This name is too short or invalid!",
       "Email": "This email is invalid!",
       "Message": "The message is too short or invalid!"
     }
+  },
+
+  "404Page": {
+    "title": "404",
+    "subtitle": "The page that you try to visit doesn't exists or their is a fault in the url",
+    "message": "Please go back to the home page using the button below or try changing the url",
+    "button": "Go back to home"
   }
 }
