@@ -1,16 +1,27 @@
 import Style from "./contactPage.module.css"
 import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
-import lang from "../lang/en.json"
 
 import * as React from "react";
 import {sendContactEmail} from "../scripts/emailjs.ts";
 import * as validator from 'email-validator';
+import {useEffect, useState} from "react";
+import {loadLanguage, useLanguage} from "../scripts/language.ts";
 
 function ContactPage() {
     const [errorName, setErrorName] = React.useState<string>("");
     const [errorEmail, setErrorEmail] = React.useState<string>("");
     const [errorMessage, setErrorMessage] = React.useState<string>("");
+    const [lang, setLang] = useState<any>(null);
+    const language = useLanguage();
+
+    useEffect(() => {
+        if (!language) return;
+        void (async () => {
+            const langData = await loadLanguage(language);
+            setLang(langData);
+        })();
+    }, [language]);
 
     const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -58,9 +69,10 @@ function ContactPage() {
             sendContactEmail(formValues);
         }
     }
+
     return (
         <>
-            <div className={Style.wrapper}>
+            {lang &&<div className={Style.wrapper}>
                 <Navbar />
                 <div className={Style.contactFormContainer}>
                     <h1>{lang.contactPage.contactMe}</h1>
@@ -89,7 +101,7 @@ function ContactPage() {
                     </div>
                 </div>
                 <Footer style={{ margin: "auto 0 0 0" }} />
-            </div>
+            </div>}
         </>
     )
 }

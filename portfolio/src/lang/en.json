@@ -37,6 +37,7 @@
     }
   ],
 
+  "projects": "Projects",
   "latestProjects": "Latest Projects",
   "projectsObjects": [
     {
@@ -61,7 +62,7 @@
     "mail": "jurre.blankers@gmail.com"
   },
 
-  "404Page": {
+  "errorPage": {
     "title": "404",
     "subtitle": "The page that you try to visit doesn't exists or their is a fault in the url",
     "message": "Please go back to the home page using the button below or try changing the url",

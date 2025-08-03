@@ -2,19 +2,30 @@ import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
 
 import Style from "./404Page.module.css"
-import lang from "../lang/en.json"
+import {useEffect, useState} from "react";
+import {loadLanguage, useLanguage} from "../scripts/language.ts";
 
 function ErrorPage() {
+    const [lang, setLang] = useState<any>(null);
+    const language = useLanguage();
+
+    useEffect(() => {
+        if (!language) return;
+        void (async () => {
+            const langData = await loadLanguage(language);
+            setLang(langData);
+        })();
+    }, [language]);
     return (
         <>
-            <div className={Style.wrapper}>
+            {lang && <div className={Style.wrapper}>
                 <Navbar />
-                <h1>{lang["404Page"].title}</h1>
-                <p>{lang["404Page"].subtitle}</p>
-                <p>{lang["404Page"].message}</p>
-                <div>{lang["404Page"].button}</div>
+                <h1>{lang.errorPage.title}</h1>
+                <p>{lang.errorPage.subtitle}</p>
+                <p>{lang.errorPage.message}</p>
+                <div>{lang.errorPage.button}</div>
                 <Footer style={{ margin: "auto 0 0 0" }}/>
-            </div>
+            </div>}
         </>)
 }
 

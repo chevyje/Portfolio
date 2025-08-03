@@ -1,16 +1,19 @@
 import Style from "./landingPage.module.css"
 import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
-import lang from "../lang/en.json";
 
 // React imports
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import {useEffect, useState} from "react";
 import { useNavigate } from "react-router";
 
+// Script imports
+import {loadLanguage, useLanguage} from "../scripts/language.ts"
+
 function LandingPage() {
-    const latestProjects = [...lang.projectsObjects].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()).slice(0,3);
+    const [lang, setLang] = useState<any>(null);
+    const [latestProjects, setLatestProjects] = useState<any>(null);
     const { hash } = useLocation();
     let navigate = useNavigate();
 
@@ -21,9 +24,21 @@ function LandingPage() {
         }
     }, [hash]);
 
+    const language = useLanguage();
+
+    useEffect(() => {
+        if (!language) return;
+        void (async () => {
+            const langData = await loadLanguage(language);
+            const latestProjects = [...langData.projectsObjects].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()).slice(0,3);
+            setLang(langData);
+            setLatestProjects(latestProjects);
+        })();
+    }, [language]);
+
     return (
         <>
-            <div className={Style.wrapper}>
+            {lang && <div className={Style.wrapper}>
                 <Navbar/>
                 {/*background top*/}
                 <div className={`${Style.background} ${Style.large}`}>`
@@ -54,8 +69,8 @@ function LandingPage() {
                         <h1>{lang.landingPage.Jurre}</h1>
                         <h2>{lang.landingPage.function}</h2>
                             <div>
-                                <a className={Style.button} style={{ backgroundColor: '#0040FF', color: 'white'}} href={"/#about"}>{lang.landingPage.moreButton}</a>
-                                <NavLink className={Style.button} style={{ backgroundColor: 'white', color: '#0040FF', border: '2px solid #0040FF'}} to={"/contact"}>{lang.landingPage.contactMe}</NavLink>
+                                <a className={Style.button} style={{ backgroundColor: '#0040FF', color: 'white'}} href={`/${language}#about`}>{lang.landingPage.moreButton}</a>
+                                <NavLink className={Style.button} style={{ backgroundColor: 'white', color: '#0040FF', border: '2px solid #0040FF'}} to={`/${language}/contact`}>{lang.landingPage.contactMe}</NavLink>
                             </div>
                         </div>
                     <div className={Style.picture}></div>
@@ -79,7 +94,7 @@ function LandingPage() {
                 <div className={Style.education} id={"education"}>
                     <h2 className={Style.timelineTitle}>{lang.education}</h2>
                     <div className={Style.timelineLine}>
-                        {lang.educationPoints.map((item, index) => (
+                        {lang.educationPoints.map((item: any, index: number) => (
                             <div className={Style.timelineEntry} key={index}>
                                 <div onClick={(event) => ExternalLink(item.website, event)} className={`${Style.timelineCard} ${index % 2 === 0 ? Style.left : Style.right}`}>
                                     <h3 className={Style.educationTitle}>{item.title}</h3>
@@ -96,18 +111,18 @@ function LandingPage() {
                 <div className={Style.projects}>
                     <h2>{lang.latestProjects}</h2>
                     <div className={Style.projectContainer}>
-                        {latestProjects.map((project, index) => (
-                            <div className={Style.project} key={index} onClick={() => navigate(`/project/${project.id}`)}>
+                        {latestProjects.map((project: any, index: number) => (
+                            <div className={Style.project} key={index} onClick={() => navigate(`/${language}/project/${project.id}`)}>
                                 <img src={`/pictures/${project.image}`} alt={project.image} className={Style.projectImage}/>
                                 <div className={Style.projectInfo}>{project.title}</div>
                             </div>
                         ))}
                     </div>
-                    <NavLink className={Style.button} style={{border: '1px solid black', margin: '10px', color: "black"}} to={"/projects"}>More Projects</NavLink>
+                    <NavLink className={Style.button} style={{border: '1px solid black', margin: '10px', color: "black"}} to={`/${language}/projects`}>More Projects</NavLink>
                 </div>
 
                 <Footer />
-            </div>
+            </div>}
         </>
     )
 }
