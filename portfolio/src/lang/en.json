@@ -65,9 +65,9 @@
 
   "errorPage": {
     "title": "404",
-    "subtitle": "The page that you try to visit doesn't exists or their is a fault in the url",
-    "message": "Please go back to the home page using the button below or try changing the url",
-    "button": "Go back to home"
+    "subtitle": "Page not found!",
+    "message": "The page you tried to visit does not exists. \nPlease go back to the home page using the button below or try another url.",
+    "button": "Home"
   },
 
   "ErrorMessages": {
