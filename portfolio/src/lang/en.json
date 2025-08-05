@@ -1,21 +1,27 @@
 {
-  "home": "Home",
-  "about": "About",
+  "navigations": {
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "copyRights": "Since 2025 - Jurre Blankers",
+
+  "landingPage": {
+    "hey": "Hey, I'm",
+    "Jurre": "Jurre Blankers",
+    "function": "Software Developer",
+    "moreButton": "See More",
+    "contactMe": "Contact Me",
+    "aboutMe": "About Me",
+    "paragraph1": "My name is Jurre Blankers, an 18 year old ICT student at the Hogeschool Utrecht. After graduating from havo in 2024, i decided to pursue my passion for technology by starting a bachelor’s degree in ICT.",
+    "paragraph2": "I’ve been fascinated by how things work for quite a while now, especially when it comes to computers and coding. programming gives me the creative freedom to build, solve problems, and continuously innovate. It’s something I enjoy both in my study and in my free time.",
+    "paragraph3": "Outside of school, I’m active in scouting, which has taught me teamwork, organizing activities for groups, and taking time to relax. I also enjoy gaming, mainly as a way to unwind and have fun with friends. Besides that, I like spending time with friends, whether it’s doing something active or just hanging out. There hobbies help me to stay balanced and give me energy to keep learning and growing as a developer.",
+    "paragraph4": "I’m excited about what the future will bring me, and I’m always open to new opportunities to grow, collaborate, and create meaningful digital solutions."
+  },
+
   "education": "Education",
-  "projects": "Projects",
-  "contact": "Contact",
-
-  "hey": "Hey, I'm",
-  "function": "Software Developer",
-  "moreButton": "See More",
-  "contactMe": "Contact Me",
-
-  "aboutMe": "About Me",
-  "paragraph1": "My name is Jurre Blankers, an 18 year old ICT student at the Hogeschool Utrecht. After graduating from havo in 2024, i decided to pursue my passion for technology by starting a bachelor’s degree in ICT.",
-  "paragraph2": "I’ve been fascinated by how things work for quite a while now, especially when it comes to computers and coding. programming gives me the creative freedom to build, solve problems, and continuously innovate. It’s something I enjoy both in my study and in my free time.",
-  "paragraph3": "Outside of school, I’m active in scouting, which has taught me teamwork, organizing activities for groups, and taking time to relax. I also enjoy gaming, mainly as a way to unwind and have fun with friends. Besides that, I like spending time with friends, whether it’s doing something active or just hanging out. There hobbies help me to stay balanced and give me energy to keep learning and growing as a developer.",
-  "paragraph4": "I’m excited about what the future will bring me, and I’m always open to new opportunities to grow, collaborate, and create meaningful digital solutions.",
-
   "educationPoints": [
     {
       "title": "Dr. Moller College",
@@ -24,44 +30,45 @@
       "website": "https://www.drmollercollege.nl/"
     },
     {
-      "title":"Hogeschool Utrecht",
+      "title": "Hogeschool Utrecht",
       "years": "2024 - now",
       "subtitle": "Bachelor's degree ICT",
       "website": "https://www.hu.nl/voltijd-opleidingen/open-ict"
     }
   ],
 
+  "projects": "Projects",
   "latestProjects": "Latest Projects",
   "projectsObjects": [
     {
       "id": "1",
-      "title": "Test 1",
-      "date": "29-06-2025"
-    },
-    {
-      "id": "2",
-      "title": "Test 2",
-      "date": "30-06-2025"
-    },
-    {
-      "id": "3",
-      "title": "Test 3",
-      "date": "29-06-2025"
-    },
-    {
-      "id": "4",
-      "title": "Test 4",
-      "date": "14-07-2025"
+      "title": "Δυµαχω",
+      "subtitle": "From Paper to Platform",
+      "description": "This project was carried out during the second semester of the first year of our studies at the Utrecht University of Applied Sciences, in collaboration with a team of five students. The problem statement was provided by the company Dumaco Oss. Although we were not yet allowed to actively collaborate with external companies at that stage, their case served as the foundation for our project. As a result, we chose our own project name, inspired by the name Dumaco in Ancient Greek.\n\nThe goal of the project was to optimize internal processes at Dumaco, with a specific focus on the order slip process. At the time, this process was still entirely paper-based, which often led to inefficiencies and errors. Our solution involved digitizing the process by developing a custom web application with an integrated database. Additionally, there was limited visibility into the location of products and their corresponding pallets within the factory. We conducted research into potential solutions for this issue as well and developed a proof of concept.\n\nThroughout the project, we worked with many new technologies. As a result, we built a solution that lacked a solid foundation, but this also provided valuable learning experiences. We reflected on this and identified concrete areas for improvement to apply in future projects. For the technical implementation, we used React for the frontend, and Node.js with JavaScript and a MySQL database for the backend.",
+      "image": "dumaco.png",
+      "url": "https://github.com/chevyje/Dumaco",
+      "date": "06-02-2025"
     }
   ],
 
-  "contactMessage": "Any questions or remarks? Just write me a message!",
-  "Name": "Name",
-  "Email": "Email",
-  "Message": "Message",
-  "Submit": "Submit",
+  "contactPage": {
+    "contactMe": "Contact Me",
+    "contactMessage": "Any questions or remarks? Just write me a message!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
 
-  "copyRights": "Since 2025 - Jurre Blankers",
+    "phone number": "+31-625581200",
+    "mail": "jurre.blankers@gmail.com"
+  },
+
+  "errorPage": {
+    "title": "404",
+    "subtitle": "Page not found!",
+    "message": "The page you tried to visit does not exists. \nPlease go back to the home page using the button below or try another url.",
+    "button": "Home"
+  },
 
   "ErrorMessages": {
     "Invalid": {

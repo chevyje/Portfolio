@@ -1,0 +1,46 @@
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 4rem;
+    margin: 30px;
+}
+
+.description{
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+.image{
+    float: left;
+    user-select: none;
+    width: 50%;
+    max-width: 500px;
+    border: 1px solid black;
+    margin: 0 25px 15px 0;
+    border-radius: 15px;
+}
+
+.button{
+    margin: auto 0 0 0;
+    padding: 15px 50px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){
+    .title{
+        font-size: 2rem;
+    }
+    .description{
+        font-size: .9rem;
+    }
+}

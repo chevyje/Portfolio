@@ -1,16 +1,27 @@
 import Style from "./contactPage.module.css"
 import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
-import lang from "../lang/en.json"
 
 import * as React from "react";
 import {sendContactEmail} from "../scripts/emailjs.ts";
 import * as validator from 'email-validator';
+import {useEffect, useState} from "react";
+import {loadLanguage, useLanguage} from "../scripts/language.ts";
 
 function ContactPage() {
     const [errorName, setErrorName] = React.useState<string>("");
     const [errorEmail, setErrorEmail] = React.useState<string>("");
     const [errorMessage, setErrorMessage] = React.useState<string>("");
+    const [lang, setLang] = useState<any>(null);
+    const language = useLanguage();
+
+    useEffect(() => {
+        if (!language) return;
+        void (async () => {
+            const langData = await loadLanguage(language);
+            setLang(langData);
+        })();
+    }, [language]);
 
     const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -58,38 +69,39 @@ function ContactPage() {
             sendContactEmail(formValues);
         }
     }
+
     return (
         <>
-            <div className={Style.wrapper}>
+            {lang &&<div className={Style.wrapper}>
                 <Navbar />
                 <div className={Style.contactFormContainer}>
-                    <h1>{lang.contactMe}</h1>
-                    <h2>{lang.contactMessage}</h2>
+                    <h1>{lang.contactPage.contactMe}</h1>
+                    <h2>{lang.contactPage.contactMessage}</h2>
                     <form className={Style.contactForm} onSubmit={sendEmail} noValidate>
-                        <label>{lang.Name}</label>
+                        <label>{lang.contactPage.name}</label>
                         <input name={"name"} type={"text"} />
                         <p>{errorName}</p>
-                        <label>{lang.Email}</label>
+                        <label>{lang.contactPage.email}</label>
                         <input name={"email"} type={"email"} />
                         <p>{errorEmail}</p>
-                        <label>{lang.Message}</label>
+                        <label>{lang.contactPage.message}</label>
                         <textarea name={"message"} rows={4} cols={50}></textarea>
                         <p>{errorMessage}</p>
-                        <input type="submit" value={lang.Submit} />
+                        <input type="submit" value={lang.contactPage.submit} />
                     </form>
                 </div>
                 <div className={Style.contactInfoContainer}>
                     <div className={Style.contactPoint}>
                         <div className={Style.icon}><img src={"/icons/phone.svg"} alt={"Phone"} /></div>
-                        <p>+31 625581200</p>
+                        <p>{lang.contactPage["phone number"]}</p>
                     </div>
                     <div className={Style.contactPoint}>
                         <div className={Style.icon}><img src={"/icons/mail.svg"} alt={"Mail"} /></div>
-                        <p>jurre.blankers@gmail.com</p>
+                        <p>{lang.contactPage.mail}</p>
                     </div>
                 </div>
                 <Footer style={{ margin: "auto 0 0 0" }} />
-            </div>
+            </div>}
         </>
     )
 }

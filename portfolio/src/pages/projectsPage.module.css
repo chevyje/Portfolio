@@ -2,6 +2,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url("../../public/background/projects.svg");
+    background-position: center;
 }
 
 .title{
@@ -24,6 +26,7 @@
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    border: 1px solid black;
 }
 
 .projectImage, .projectInfo {
@@ -39,18 +42,21 @@
 
 .projectImage {
     background-color: #D9D9D9;
+    user-select: none;
 }
 
 .projectInfo{
     display: none;
     color: white;
     font-size: 20px;
+    user-select: none;
 }
 
 .project:hover .projectInfo{
     display: flex;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.85;
+    cursor: pointer;
 }
 
 @media (hover: none){
