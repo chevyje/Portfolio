@@ -27,8 +27,10 @@ function projectPage() {
         <>
             {project && <div className={Style.wrapper}>
                 <Navbar />
-                <h1 className={Style.title}>{project.title}</h1>
-                <p className={Style.description}><img src={`/pictures/${project.image}`} alt={project.image} className={Style.image}/>{project.description}</p>
+                <h1 className={Style.title}>{project.title} - {project.subtitle}</h1>
+                <p className={Style.description}><img src={`/pictures/${project.image}`} alt={project.image} className={Style.image}/>{project.description.split('\n').map((line: any, index: number) => (
+                    <span key={index}>{line}<br/></span>
+                ))}</p>
                 {project.url != "" && <a className={Style.button} style={{ backgroundColor: '#0BB7F6', color: 'white', }} href={project.url} target={"_blank"} rel={"noopener noreferrer"}>{lang.landingPage.moreButton}</a>}
                 <Footer style={{ margin: "auto 0 0 0" }}/>
             </div>}

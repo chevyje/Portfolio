@@ -42,8 +42,9 @@
   "projectsObjects": [
     {
       "id": "1",
-      "title": "Dumaco",
-      "description": "",
+      "title": "Δυµαχω",
+      "subtitle": "From Paper to Platform",
+      "description": "This project was carried out during the second semester of the first year of our studies at the Utrecht University of Applied Sciences, in collaboration with a team of five students. The problem statement was provided by the company Dumaco Oss. Although we were not yet allowed to actively collaborate with external companies at that stage, their case served as the foundation for our project. As a result, we chose our own project name, inspired by the name Dumaco in Ancient Greek.\n\nThe goal of the project was to optimize internal processes at Dumaco, with a specific focus on the order slip process. At the time, this process was still entirely paper-based, which often led to inefficiencies and errors. Our solution involved digitizing the process by developing a custom web application with an integrated database. Additionally, there was limited visibility into the location of products and their corresponding pallets within the factory. We conducted research into potential solutions for this issue as well and developed a proof of concept.\n\nThroughout the project, we worked with many new technologies. As a result, we built a solution that lacked a solid foundation, but this also provided valuable learning experiences. We reflected on this and identified concrete areas for improvement to apply in future projects. For the technical implementation, we used React for the frontend, and Node.js with JavaScript and a MySQL database for the backend.",
       "image": "dumaco.png",
       "url": "https://github.com/chevyje/Dumaco",
       "date": "06-02-2025"
