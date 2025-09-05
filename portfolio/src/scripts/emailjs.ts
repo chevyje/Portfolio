@@ -18,12 +18,12 @@ type contactParams = {
 export function sendContactEmail(templateParams: contactParams){
     initEmailjs();
     console.log(templateParams);
-    // emailjs.send('service_bg33r24', 'template_jcshckg', templateParams).then(
-    //     (response) => {
-    //         console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //         console.log('FAILED...', error);
-    //     },
-    // );
+    emailjs.send('service_bg33r24', 'template_jcshckg', templateParams).then(
+        (response) => {
+            console.log('SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+            console.log('FAILED...', error);
+        },
+    );
 }
