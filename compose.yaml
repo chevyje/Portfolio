@@ -1,0 +1,7 @@
+services:
+  front-end:
+    build:
+      context: ./portfolio
+      target: production
+    ports:
+      - "80:80"
