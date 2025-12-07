@@ -48,6 +48,24 @@
       "image": "dumaco.png",
       "url": "https://github.com/chevyje/Dumaco",
       "date": "06-02-2025"
+    },
+    {
+      "id": "2",
+      "title": "Party Plaza",
+      "subtitle": "A minecraft project",
+      "description": "Party Plaza is a hobby project I started with a friend, focused on creating a Minecraft server featuring multiple minigames in a tournament format. The goal is to provide a flexible environment where players can sign up for tournaments and experience a variety of games, from PvP battles to puzzle challenges.\n\nThe project is built in Java using Maven, with a main plugin managing all minigames. A key technical feature is the two-way communication between the main plugin and the minigames, allowing the main plugin to start games and manage teams, while minigames can send information back. This modular approach ensures that minigames can operate independently but are still centrally controlled.\n\nCurrently, the first test runs have been completed with two minigames. The final plan is to implement six games with a rotation system to keep each tournament unique. While I develop most of the project myself, my friend contributed to setting up the initial framework and acquiring essential knowledge.\n\nFuture plans include expanding Party Plaza with new minigames and features, leveraging the modular design for easy maintenance and adaptation. This project demonstrates my skills in Java development, plugin architecture, and creating scalable, modular systems.",
+      "image": "party_plaza.png",
+      "url": "",
+      "date": "10-03-2025"
+    },
+    {
+      "id": "3",
+      "title": "Portfolio Website",
+      "subtitle": "Showcasing my work and skills",
+      "description": "This portfolio website is a personal project I built entirely on my own to provide a comprehensive overview of my professional profile. The website is designed to showcase my CV, completed projects, and educational background, while offering visitors a clear and structured way to explore my work and skills.\n\nTechnically, the site is built using React with TypeScript, ensuring a modern, component-based architecture. One of the key design choices was to structure all content through JSON files, enabling easy updates, additions, and translations without modifying the core codebase. Each language version is fully supported via separate JSON configurations, allowing seamless multilingual functionality and dynamic content rendering.\n\nThe website emphasizes modularity, maintainability, and scalability. Projects and other sections are dynamically loaded from the JSON data, reducing duplication and improving consistency across the site. This approach not only streamlines content management but also demonstrates best practices in structuring a React application for flexibility and future expansion.\n\nBuilding this project allowed me to strengthen my skills in React, TypeScript, and JSON-driven dynamic architectures, while creating a practical platform to present my portfolio in a professional and user-friendly way. The site is fully adaptable, maintainable, and ready to grow as my skills and projects evolve.",
+      "image": "portfolio.png",
+      "url": "https://github.com/chevyje/Portfolio",
+      "date": "30-06-2025"
     }
   ],
 
