@@ -1,0 +1,8 @@
+{
+    email jurre.blankers@gmail.com
+}
+
+jurreblankers.com, jurreblankers.nl {
+    encode gzip
+    reverse_proxy front-end:80
+}

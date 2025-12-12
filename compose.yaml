@@ -3,5 +3,5 @@ services:
     build:
       context: ./portfolio
       target: production
-    ports:
-      - "80:80"
+    expose:
+      - "80"
