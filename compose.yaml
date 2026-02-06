@@ -4,11 +4,11 @@ services:
     build:
       context: ./portfolio
       target: production
-    expose:
-      - "80"
+    ports:
+      - "127.0.0.1:10000:80"
     networks:
-      - webnet
+      - proxyNet
 
 networks:
-  webnet:
+  proxyNet:
     external: true
