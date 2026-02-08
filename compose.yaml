@@ -5,7 +5,7 @@ services:
       context: ./portfolio
       target: production
     ports:
-      - "127.0.0.1:10000:80"
+      - "10000:80"
     networks:
       - proxyNet
 
